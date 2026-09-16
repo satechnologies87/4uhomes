@@ -68,34 +68,50 @@ export default function Navbar() {
             textDecoration: 'none'
           }}
         >
-          <div
+          <img
+            src="/assets/logo-emblem.png"
+            alt="4U HOME'S - The Architectural Firm Logo"
             style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '1.5rem',
-              fontWeight: 800,
-              letterSpacing: '2px',
-              color: (scrolled && pastHero) ? 'var(--text-main)' : '#ffffff',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px'
+              height: scrolled ? '38px' : '46px',
+              width: 'auto',
+              borderRadius: '6px',
+              objectFit: 'contain',
+              boxShadow: '0 4px 14px rgba(0,0,0,0.3)',
+              border: '1px solid rgba(184,134,11,0.25)',
+              transition: 'all 0.3s ease'
             }}
-          >
-            <span style={{ color: 'var(--accent-gold)' }}>4U</span>
-            <span>HOMES</span>
+          />
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: scrolled ? '1.2rem' : '1.35rem',
+                fontWeight: 800,
+                letterSpacing: '1.5px',
+                color: (scrolled && pastHero) ? 'var(--text-main)' : '#ffffff',
+                lineHeight: 1.1,
+                transition: 'all 0.3s ease',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px'
+              }}
+            >
+              <span style={{ color: 'var(--accent-gold)' }}>4U</span>
+              <span>HOME'S</span>
+            </div>
+            <span
+              style={{
+                fontSize: '0.58rem',
+                letterSpacing: '1.8px',
+                textTransform: 'uppercase',
+                color: (scrolled && pastHero) ? 'var(--text-muted)' : 'rgba(255,255,255,0.75)',
+                fontWeight: 600,
+                marginTop: '1px'
+              }}
+            >
+              The Architectural Firm
+            </span>
           </div>
-          <span
-            style={{
-              fontSize: '0.65rem',
-              letterSpacing: '1.5px',
-              textTransform: 'uppercase',
-              color: 'var(--text-muted)',
-              borderLeft: '1px solid rgba(255, 255, 255, 0.2)',
-              paddingLeft: '10px',
-              display: scrolled ? 'none' : 'block'
-            }}
-          >
-            Kottayam
-          </span>
         </a>
 
         {/* Desktop Nav Links */}
@@ -154,7 +170,7 @@ export default function Navbar() {
             style={{
               background: 'rgba(255, 255, 255, 0.08)',
               border: '1px solid var(--border-light)',
-              color: '#ffffff',
+              color: (scrolled && pastHero) ? 'var(--text-main)' : '#ffffff',
               padding: '8px 12px',
               borderRadius: '4px',
               cursor: 'pointer',
@@ -178,17 +194,30 @@ export default function Navbar() {
             right: 0,
             bottom: 0,
             height: 'calc(100vh - 70px)',
-            backgroundColor: 'rgba(7, 9, 14, 0.96)',
+            backgroundColor: 'rgba(7, 9, 14, 0.97)',
             backdropFilter: 'blur(20px)',
             zIndex: 999,
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            padding: '40px 20px',
-            gap: '24px'
+            padding: '30px 20px',
+            gap: '18px',
+            overflowY: 'auto'
           }}
         >
+          <img
+            src="/assets/logo.png"
+            alt="4U HOME'S Logo"
+            style={{
+              maxHeight: '90px',
+              maxWidth: '220px',
+              borderRadius: '8px',
+              marginBottom: '10px',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+              border: '1px solid rgba(184,134,11,0.3)'
+            }}
+          />
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -196,11 +225,12 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               style={{
                 fontFamily: 'var(--font-heading)',
-                fontSize: '1.4rem',
+                fontSize: '1.25rem',
                 fontWeight: 600,
                 letterSpacing: '2px',
                 color: '#ffffff',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                transition: 'color 0.2s ease'
               }}
             >
               {link.label}
@@ -211,7 +241,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
-            style={{ marginTop: '20px' }}
+            style={{ marginTop: '14px' }}
           >
             <span>Start Your Project</span>
             <ArrowUpRight size={18} />

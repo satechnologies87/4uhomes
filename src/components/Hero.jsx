@@ -47,10 +47,10 @@ export default function Hero() {
           position: 'relative',
           zIndex: 10,
           maxWidth: '1100px',
-          width: '90%',
+          width: '94%',
           margin: '0 auto',
           textAlign: 'center',
-          paddingTop: '60px'
+          padding: '80px 12px 40px 12px'
         }}
       >
         <div
@@ -58,20 +58,20 @@ export default function Hero() {
             marginBottom: '20px'
           }}
         >
-          <span className="tag-pill">
+          <span className="tag-pill" style={{ fontSize: '0.68rem', padding: '6px 14px' }}>
             <Compass size={12} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />
-            PREMIUM HOME BUILDERS IN KOTTAYAM, KERALA
+            4U HOME'S • THE ARCHITECTURAL FIRM
           </span>
         </div>
 
         <h1
           style={{
-            fontSize: 'clamp(2.8rem, 6.5vw, 5.5rem)',
+            fontSize: 'clamp(1.9rem, 5.8vw, 5.2rem)',
             fontWeight: 800,
-            lineHeight: 1.05,
-            marginBottom: '24px',
+            lineHeight: 1.08,
+            marginBottom: '20px',
             textTransform: 'uppercase',
-            letterSpacing: '-1px'
+            letterSpacing: '-0.5px'
           }}
         >
           Designing Spaces.<br />
@@ -80,15 +80,15 @@ export default function Hero() {
 
         <p
           style={{
-            fontSize: 'clamp(1rem, 1.8vw, 1.25rem)',
+            fontSize: 'clamp(0.92rem, 1.6vw, 1.2rem)',
             maxWidth: '740px',
-            margin: '0 auto 40px auto',
-            color: 'rgba(243, 244, 246, 0.85)',
+            margin: '0 auto 32px auto',
+            color: 'rgba(243, 244, 246, 0.88)',
             fontWeight: 300,
             lineHeight: 1.7
           }}
         >
-          Premium home builders in Kottayam, Kerala, creating thoughtfully designed luxury custom homes built around the way you live.
+          Premier home builders in Kottayam, Kerala — 4U HOME'S creates thoughtfully designed luxury custom homes built around the way you live.
         </p>
 
         {/* Action Buttons */}
@@ -98,11 +98,11 @@ export default function Hero() {
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '20px'
+            gap: '14px'
           }}
         >
-          <a href="#architectural-journey" className="btn-primary" data-cursor="EXPLORE">
-            <span>Explore Our Homes</span>
+          <a href="#architectural-journey" className="btn-primary" data-cursor="EXPLORE" style={{ padding: '14px 28px' }}>
+            <span>Explore Our Handovers</span>
             <ArrowDown size={18} />
           </a>
 
@@ -112,6 +112,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="btn-secondary"
             data-cursor="CONTACT"
+            style={{ padding: '14px 28px', color: '#ffffff' }}
           >
             <span>Start Your Project</span>
             <ArrowUpRight size={18} />

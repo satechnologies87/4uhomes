@@ -173,8 +173,9 @@ export default function ScrollHouse() {
         <div
           style={{
             position:  'absolute',
-            bottom:    '170px',
-            left:      '72px',
+            bottom:    'clamp(100px, 18vh, 170px)',
+            left:      'clamp(16px, 5vw, 72px)',
+            right:     'clamp(16px, 5vw, 72px)',
             zIndex:    20,
             maxWidth:  '760px',
           }}

@@ -146,15 +146,21 @@ export default function ProjectDetailsModal({ project, onClose }) {
         </div>
 
         {/* Details Grid */}
-        <div style={{ padding: '40px', display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '40px' }}>
-          <div style={{ gridColumn: '1 / span 8' }}>
+        <div
+          style={{ padding: '30px 20px', display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '30px' }}
+          className="modal-details-grid"
+        >
+          <div style={{ gridColumn: '1 / span 8' }} className="modal-main-col">
             <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '16px' }}>Project Overview</h3>
             <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '30px' }}>
               {project.description}
             </p>
 
             <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '16px' }}>Key Architectural Highlights</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', marginBottom: '30px' }}>
+            <div
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', marginBottom: '30px' }}
+              className="modal-highlights-grid"
+            >
               {project.highlights.map((h, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <CheckCircle2 size={18} color="var(--accent-gold)" />
@@ -176,8 +182,8 @@ export default function ProjectDetailsModal({ project, onClose }) {
             )}
           </div>
 
-          <div style={{ gridColumn: '9 / span 4' }}>
-            <div className="glass-panel" style={{ padding: '30px', borderRadius: '12px' }}>
+          <div style={{ gridColumn: '9 / span 4' }} className="modal-side-col">
+            <div className="glass-panel" style={{ padding: '24px', borderRadius: '12px' }}>
               <h4 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '20px' }}>Project Details</h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -219,6 +225,15 @@ export default function ProjectDetailsModal({ project, onClose }) {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .modal-main-col, .modal-side-col { grid-column: 1 / span 12 !important; }
+        }
+        @media (max-width: 600px) {
+          .modal-highlights-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </div>
   );
 }

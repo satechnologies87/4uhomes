@@ -64,13 +64,25 @@ export default function Contact() {
           style={{ gridColumn: '1 / span 6' }}
           className="contact-info-col"
         >
-          <span className="tag-pill" style={{ marginBottom: '16px' }}>
-            START YOUR PROJECT
-          </span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+            <img
+              src="/assets/logo-emblem.png"
+              alt="4U HOME'S"
+              style={{
+                height: '36px',
+                width: 'auto',
+                borderRadius: '6px',
+                border: '1px solid rgba(184,134,11,0.3)'
+              }}
+            />
+            <span className="tag-pill">
+              4U HOME'S • START YOUR PROJECT
+            </span>
+          </div>
 
           <h2
             style={{
-              fontSize: 'clamp(2.4rem, 4.5vw, 4rem)',
+              fontSize: 'clamp(2.1rem, 4.5vw, 3.8rem)',
               fontWeight: 800,
               lineHeight: 1.1,
               marginBottom: '24px'

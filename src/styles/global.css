@@ -272,4 +272,43 @@ p { line-height: 1.7; color: var(--text-muted); }
 @media (max-width: 768px) {
   .custom-cursor { display: none !important; }
   .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
+  
+  /* Mobile padding and typography optimization */
+  section {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+  
+  .btn-primary, .btn-secondary, .btn-primary-dark {
+    padding: 13px 22px !important;
+    font-size: 0.82rem !important;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Prevent iOS zoom on input focus */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  
+  .tag-pill {
+    font-size: 0.64rem !important;
+    padding: 5px 12px !important;
+    letter-spacing: 1.5px !important;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.8rem !important;
+  }
 }
+
+@media (max-width: 480px) {
+  section {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+  }
+}
+

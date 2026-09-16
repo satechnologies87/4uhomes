@@ -211,6 +211,10 @@ export default function Projects() {
         @media (max-width: 900px) {
           .project-image-wrapper, .project-info-wrapper { grid-column: 1 / span 12 !important; order: initial !important; }
         }
+        @media (max-width: 600px) {
+          .project-info-wrapper { padding: 28px 20px !important; }
+          .project-image-wrapper { min-height: 260px !important; }
+        }
       `}</style>
     </section>
   );

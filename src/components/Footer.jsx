@@ -29,20 +29,19 @@ export default function Footer() {
         >
           {/* Brand & SEO info */}
           <div style={{ gridColumn: '1 / span 5' }} className="footer-brand">
-            <div
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: '1.8rem',
-                fontWeight: 800,
-                color: '#ffffff',
-                marginBottom: '16px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px'
-              }}
-            >
-              <span style={{ color: 'var(--accent-gold)' }}>4U</span>
-              <span>HOMES</span>
+            <div style={{ marginBottom: '20px' }}>
+              <img
+                src="/assets/logo.png"
+                alt="4U HOME'S - The Architectural Firm Logo"
+                style={{
+                  maxHeight: '85px',
+                  width: 'auto',
+                  borderRadius: '10px',
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.4)',
+                  border: '1px solid rgba(184,134,11,0.25)',
+                  display: 'block'
+                }}
+              />
             </div>
 
             <p
@@ -54,7 +53,7 @@ export default function Footer() {
                 maxWidth: '440px'
               }}
             >
-              4U Homes is a premier home builder in Kottayam, Kerala, specializing in thoughtful architecture, luxury custom home construction, bespoke interior design, floating staircases, and complete turnkey residential solutions.
+              4U HOME'S - The Architectural Firm is a premier home builder in Kottayam, Kerala, specializing in thoughtful architecture, luxury custom home construction, bespoke interior design, floating staircases, and complete turnkey residential solutions.
             </p>
 
             <div style={{ display: 'flex', gap: '12px' }}>
